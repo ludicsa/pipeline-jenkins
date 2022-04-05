@@ -37,4 +37,4 @@ def list_running_software():
 
 
 if __name__ == '__main__':
-    app.run(host="localhost", port=8080, debug="False")
+    app.run(host="localhost", port=8282, debug="False")
