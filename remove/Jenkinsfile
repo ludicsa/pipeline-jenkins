@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Removing docker container and image') {
+            steps {
+                sh './remove.sh'
+            }
+        }
+        
+}
