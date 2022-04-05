@@ -1,23 +1,21 @@
 pipeline {
     agent any
-
     stages {
-        stage('git') {
+        stage ('git'){
             steps {
                 git branch: 'main', url: 'https://github.com/ludicsa/pipeline-jenkins.git'
-            }
+            }   
         }
-        
-        stage('build'){
-            steps{
+
+        stage ('build') {
+            steps {
                 sh 'docker build -t flask-python-application .'
             }
         }
-        
-        stage('status'){
-            steps{
-                sh './status.sh'
-            }
+    }
+    post {
+        success {
+            sh './status.sh'
         }
     }
 }
