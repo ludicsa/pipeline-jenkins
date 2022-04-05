@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Launch') {
+            steps {
+                sh 'docker run -d -p 8282:8282 --name flask-python-app flask-python-application'
+            }
+        }
+        
+    
+        
+        stage('Container status'){
+            steps{
+                sh './status.sh'
+            }
+        }
+        
+}
