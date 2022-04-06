@@ -15,7 +15,7 @@ pipeline {
     }
     post {
         success {
-            sh 'chmod +x status.sh'
+            sh 'chmod +x status_image.sh'
             sh './status_image.sh'
         }
     }
