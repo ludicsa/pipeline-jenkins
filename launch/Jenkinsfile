@@ -7,13 +7,11 @@ pipeline {
                 sh 'docker run -d -p 8282:8282 --name flask-python-app flask-python-application'
             }
         }
-        
-    
-        
-        stage('status'){
-            steps{
-                sh './status.sh'
-            }
+    }
+    post {
+        success {
+            sh './status.sh'
+            
         }
     }
 }
