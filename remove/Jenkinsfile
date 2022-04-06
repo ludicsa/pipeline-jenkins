@@ -1,4 +1,4 @@
-pipeline
+pipeline {
     agent any
     stages {
         stage ('remove') {
@@ -8,4 +8,4 @@ pipeline
             }    
         }   
     } 
-
+}
