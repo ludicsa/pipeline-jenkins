@@ -18,7 +18,7 @@ pipeline {
     }
     post {
         success {
-            sh 'chmod +x ./status.sh'
+            sh 'chmod +x status.sh'
             sh './status_container.sh'
             
         }
