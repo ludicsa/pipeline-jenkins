@@ -15,5 +15,5 @@ pipeline {
                 sh './status.sh'
             }
         }
-        
+    }
 }
