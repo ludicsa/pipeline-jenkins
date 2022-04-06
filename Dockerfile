@@ -10,8 +10,8 @@ EXPOSE 8080
 
 ENV FLASK_ENV development
 
-COPY server.py .
+COPY /app/server.py .
 
-COPY services.py .
+COPY /app/services.py .
 
 CMD [ "python3", "server.py" ]
