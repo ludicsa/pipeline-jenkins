@@ -2,7 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('launch') {
+        stage('docker login') {
+            steps {
+                sh 'docker login'
+            }
+        }
+    }
+
+    stages {
+        stage ('launch') {
             steps {
                 sh 'docker run -d -p 8282:8282 --name flask-python-app flask-python-application'
             }
@@ -10,6 +18,7 @@ pipeline {
     }
     post {
         success {
+            sh 'chmod +x ./status.sh'
             sh './status_container.sh'
             
         }
