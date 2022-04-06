@@ -10,7 +10,7 @@ pipeline {
     }
     post {
         success {
-            sh './status.sh'
+            sh './status_container.sh'
             
         }
     }
