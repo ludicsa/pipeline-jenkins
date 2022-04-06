@@ -4,14 +4,14 @@ WORKDIR /
 
 COPY /app/requirements.txt .
 
+COPY /app/server.py .
+
+COPY /app/services.py .
+
 RUN pip install -r requirements.txt
 
 EXPOSE 8080
 
 ENV FLASK_ENV development
-
-COPY /app/server.py .
-
-COPY /app/services.py .
 
 CMD [ "python3", "server.py" ]
