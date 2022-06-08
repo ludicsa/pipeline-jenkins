@@ -1,4 +1,4 @@
-Jenkins Lab
+Study -- Jenkins Lab
 ================
 
 In this directory you will find files to manage a dockerized flask/python application to run with **Jenkins** pipeline.
