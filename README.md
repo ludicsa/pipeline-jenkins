@@ -4,7 +4,7 @@ Study -- Jenkins Lab
 In this directory you will find files to manage a dockerized flask/python application to run with **Jenkins** pipeline.
 
 ### Jenkins Configuration
-In this step you'll configure containers to access jenkins dashboard on localhost.
+In this step you will configure containers to access jenkins dashboard on localhost.
 
 1. Run the script on the main folder to build images and get the container up: 
 ```
